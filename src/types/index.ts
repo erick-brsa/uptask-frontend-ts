@@ -8,7 +8,19 @@ export const projectSchema = z.object({
 	description: z.string()
 });
 
+export const dashboardProjectSchema = z.array(
+	projectSchema.pick({
+		_id: true,
+		projectName: true,
+		clientName: true,
+		description: true
+	})
+);
+
 export type Project = z.infer<typeof projectSchema>;
 // export interface IProject extends TProject {};
 
-export type ProjectFormData = Pick<Project, 'projectName' | 'clientName' | 'description'>;
+export type ProjectFormData = Pick<
+	Project,
+	'projectName' | 'clientName' | 'description'
+>;

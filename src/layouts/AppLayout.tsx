@@ -17,7 +17,7 @@ export default function AppLayout() {
 				</div>
 			</header>
 
-			<section className="max-w-2xl mx-auto mt-10 p-5">
+			<section className="max-w-4xl mx-auto mt-10 p-5">
 				<Outlet />
 			</section>
 
@@ -26,6 +26,7 @@ export default function AppLayout() {
 					Todos los derechos reservados {new Date().getFullYear()}
 				</p>
 			</footer>
+
 			<ToastContainer 
 				pauseOnHover={false}
 				pauseOnFocusLoss={false}
